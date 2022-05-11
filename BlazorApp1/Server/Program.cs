@@ -31,6 +31,10 @@ app.UseWhen(match =>
         demoApp.UseBlazorFrameworkFiles(baseHref);
         demoApp.UseStaticFiles();
         demoApp.UseStaticFiles(baseHref);
+        
+        //This doesnt seem to make any difference
+        demoApp.UsePathBase(baseHref);
+        
         demoApp.UseEndpoints(endpoints =>
         {
             endpoints.MapFallbackToFile(
@@ -39,22 +43,10 @@ app.UseWhen(match =>
         });
     });
 
-//app.UseBlazorFrameworkFiles(baseHref);
-//app.UseStaticFiles();
-//app.UseStaticFiles(baseHref);
-
 app.UseRouting();
 
 
 app.MapRazorPages();
 app.MapControllers();
-//app.MapFallbackToFile("index.html");
-
-//app.UseEndpoints(endpoints =>
-//{
-//    endpoints.MapFallbackToFile(
-//        baseHref + "/{*path:nonfile}",
-//        $"{baseHref}/index.html");
-//});
 
 app.Run();
