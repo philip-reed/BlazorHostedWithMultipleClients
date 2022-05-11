@@ -27,13 +27,14 @@ app.UseWhen(match =>
         match.Request.Path.StartsWithSegments(baseHref),
     demoApp =>
     {
+        //This doesnt seem to make any difference or breaks the app completely
+        //May need to remove <base href="/demo/"> from Index.html but doing so also doesnt seem to make a difference
+        //demoApp.UsePathBase(baseHref);
+
         demoApp.UseRouting();
         demoApp.UseBlazorFrameworkFiles(baseHref);
         demoApp.UseStaticFiles();
         demoApp.UseStaticFiles(baseHref);
-        
-        //This doesnt seem to make any difference
-        demoApp.UsePathBase(baseHref);
         
         demoApp.UseEndpoints(endpoints =>
         {
