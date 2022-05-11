@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Server", "BlazorApp1\Server\BlazorApp1.Server.csproj", "{DBD39873-B482-43E6-B871-498629543181}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Server", "BlazorApp1\Server\BlazorApp1.Server.csproj", "{DBD39873-B482-43E6-B871-498629543181}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Client", "BlazorApp1\Client\BlazorApp1.Client.csproj", "{AF19C453-DCFC-43DC-A6AB-52802EA5E8CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Client", "BlazorApp1\Client\BlazorApp1.Client.csproj", "{AF19C453-DCFC-43DC-A6AB-52802EA5E8CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Shared", "BlazorApp1\Shared\BlazorApp1.Shared.csproj", "{40489A0B-A5F6-4BA7-829E-719601BBAD4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Shared", "BlazorApp1\Shared\BlazorApp1.Shared.csproj", "{40489A0B-A5F6-4BA7-829E-719601BBAD4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorClassLibrary1", "RazorClassLibrary1\RazorClassLibrary1.csproj", "{C9E18503-673F-4330-89A9-51C54E44EEB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorClassLibrary1", "RazorClassLibrary1\RazorClassLibrary1.csproj", "{C9E18503-673F-4330-89A9-51C54E44EEB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp2.Client", "BlazorApp1\Client2\BlazorApp2.Client.csproj", "{27914A23-BD3D-4793-8730-428155A9C53F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C9E18503-673F-4330-89A9-51C54E44EEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9E18503-673F-4330-89A9-51C54E44EEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9E18503-673F-4330-89A9-51C54E44EEB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27914A23-BD3D-4793-8730-428155A9C53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27914A23-BD3D-4793-8730-428155A9C53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27914A23-BD3D-4793-8730-428155A9C53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27914A23-BD3D-4793-8730-428155A9C53F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

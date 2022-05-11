@@ -77,5 +77,6 @@ app.UseStaticFiles();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("/demo/{*path:nonfile}", "/demo/index.html");
+app.MapFallbackToFile("/demo2/{*path:nonfile}", "/demo2/index.html");
 
 await app.RunAsync();
