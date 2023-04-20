@@ -1,7 +1,3 @@
-using Microsoft.AspNetCore.ResponseCompression;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -24,16 +20,6 @@ else
 }
 
 app.UseHttpsRedirection();
-
-//app.UseBlazorFrameworkFiles();
-//app.UseStaticFiles();
-
-//app.UseRouting();
-
-
-//app.MapRazorPages();
-//app.MapControllers();
-//app.MapFallbackToFile("index.html");
 
 app.MapWhen(ctx => ctx.Request.Host.Port == 5001 ||
                    ctx.Request.Host.Equals("app1.com"), first =>
