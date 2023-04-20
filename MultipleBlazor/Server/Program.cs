@@ -1,7 +1,3 @@
-using Microsoft.AspNetCore.ResponseCompression;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,15 +21,6 @@ else
 
 app.UseHttpsRedirection();
 
-//app.UseBlazorFrameworkFiles();
-//app.UseStaticFiles();
-
-//app.UseRouting();
-
-
-//app.MapRazorPages();
-//app.MapControllers();
-//app.MapFallbackToFile("index.html");
 
 app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/app1", StringComparison.OrdinalIgnoreCase), first =>
 {
