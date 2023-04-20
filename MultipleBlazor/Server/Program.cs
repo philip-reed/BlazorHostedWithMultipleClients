@@ -35,7 +35,8 @@ app.UseHttpsRedirection();
 //app.MapControllers();
 //app.MapFallbackToFile("index.html");
 
-app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/app1", StringComparison.OrdinalIgnoreCase), first =>
+app.MapWhen(ctx => ctx.Request.Host.Port == 5001 ||
+                   ctx.Request.Host.Equals("app1.com"), first =>
 {
     first.Use((ctx, nxt) =>
     {
@@ -43,7 +44,7 @@ app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/app1", StringComparison
         return nxt();
     });
 
-    first.UsePathBase("/App1");
+    //first.UsePathBase("/App1");
     first.UseBlazorFrameworkFiles("/App1");
     first.UseStaticFiles();
     first.UseStaticFiles("/App1");
@@ -57,7 +58,8 @@ app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/app1", StringComparison
     });
 });
 
-app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/app2", StringComparison.OrdinalIgnoreCase), second =>
+app.MapWhen(ctx => ctx.Request.Host.Port == 5002 ||
+                   ctx.Request.Host.Equals("app2.com"), second =>
 {
     second.Use((ctx, nxt) =>
     {
@@ -65,7 +67,7 @@ app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/app2", StringComparison
         return nxt();
     });
 
-    second.UsePathBase("/App2");
+    //econd.UsePathBase("/App2");
     second.UseBlazorFrameworkFiles("/App2");
     second.UseStaticFiles();
     second.UseStaticFiles("/App2");
