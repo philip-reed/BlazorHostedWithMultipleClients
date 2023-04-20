@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
-	  <StaticWebAssetBasePath>App2</StaticWebAssetBasePath>
+	  <StaticWebAssetBasePath>app2</StaticWebAssetBasePath>
   </PropertyGroup>
 
   <ItemGroup>

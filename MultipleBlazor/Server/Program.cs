@@ -21,26 +21,25 @@ else
 
 app.UseHttpsRedirection();
 
-
 app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/app1", StringComparison.OrdinalIgnoreCase), first =>
 {
     first.Use((ctx, nxt) =>
     {
-        ctx.Request.Path = "/App1" + ctx.Request.Path;
+        ctx.Request.Path = "/app1" + ctx.Request.Path;
         return nxt();
     });
 
-    first.UsePathBase("/App1");
-    first.UseBlazorFrameworkFiles("/App1");
+    first.UsePathBase("/app1");
+    first.UseBlazorFrameworkFiles("/app1");
     first.UseStaticFiles();
-    first.UseStaticFiles("/App1");
+    first.UseStaticFiles("/app1");
     first.UseRouting();
 
     first.UseEndpoints(endpoints =>
     {
         endpoints.MapControllers();
-        endpoints.MapFallbackToFile("/App1/{*path:nonfile}",
-            "App1/index.html");
+        endpoints.MapFallbackToFile("/app1/{*path:nonfile}",
+            "app1/index.html");
     });
 });
 
@@ -48,21 +47,21 @@ app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/app2", StringComparison
 {
     second.Use((ctx, nxt) =>
     {
-        ctx.Request.Path = "/App2" + ctx.Request.Path;
+        ctx.Request.Path = "/app2" + ctx.Request.Path;
         return nxt();
     });
 
-    second.UsePathBase("/App2");
-    second.UseBlazorFrameworkFiles("/App2");
+    second.UsePathBase("/app2");
+    second.UseBlazorFrameworkFiles("/app2");
     second.UseStaticFiles();
-    second.UseStaticFiles("/App2");
+    second.UseStaticFiles("/app2");
     second.UseRouting();
 
     second.UseEndpoints(endpoints =>
     {
         endpoints.MapControllers();
-        endpoints.MapFallbackToFile("/App2/{*path:nonfile}",
-            "App2/index.html");
+        endpoints.MapFallbackToFile("/app2/{*path:nonfile}",
+            "app2/index.html");
     });
 });
 
